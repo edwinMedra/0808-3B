@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            linkLabel1 = new LinkLabel();
+            linkRegistro = new LinkLabel();
             buttonIniciar = new Button();
             labelContra = new TextBox();
             labelUser = new TextBox();
@@ -42,7 +42,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightBlue;
-            panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(linkRegistro);
             panel1.Controls.Add(buttonIniciar);
             panel1.Controls.Add(labelContra);
             panel1.Controls.Add(labelUser);
@@ -55,21 +55,21 @@
             panel1.Size = new Size(544, 577);
             panel1.TabIndex = 0;
             // 
-            // linkLabel1
+            // linkRegistro
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(234, 449);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(74, 23);
-            linkLabel1.TabIndex = 6;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Registrase";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            linkRegistro.AutoSize = true;
+            linkRegistro.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkRegistro.Location = new Point(234, 449);
+            linkRegistro.Name = "linkRegistro";
+            linkRegistro.Size = new Size(74, 23);
+            linkRegistro.TabIndex = 6;
+            linkRegistro.TabStop = true;
+            linkRegistro.Text = "Registrase";
+            linkRegistro.LinkClicked += linkLabel1_LinkClicked;
             // 
             // buttonIniciar
             // 
-            buttonIniciar.BackColor = Color.LightGray;
+            buttonIniciar.BackColor = Color.Transparent;
             buttonIniciar.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonIniciar.Location = new Point(196, 407);
             buttonIniciar.Name = "buttonIniciar";
@@ -148,6 +148,6 @@
         private TextBox labelContra;
         private TextBox labelUser;
         private Button buttonIniciar;
-        private LinkLabel linkLabel1;
+        private LinkLabel linkRegistro;
     }
 }
