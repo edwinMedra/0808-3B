@@ -41,12 +41,14 @@
             textBox_confirmarcontra = new TextBox();
             button_registrar = new Button();
             linkLabel1 = new LinkLabel();
+            panel_registro = new Panel();
+            panel_registro.SuspendLayout();
             SuspendLayout();
             // 
             // label_nombre
             // 
             label_nombre.AutoSize = true;
-            label_nombre.BackColor = SystemColors.Control;
+            label_nombre.BackColor = Color.LightBlue;
             label_nombre.Font = new Font("Sitka Banner", 14.2499981F);
             label_nombre.Location = new Point(95, 119);
             label_nombre.Name = "label_nombre";
@@ -58,7 +60,7 @@
             // label_apellido
             // 
             label_apellido.AutoSize = true;
-            label_apellido.BackColor = SystemColors.Control;
+            label_apellido.BackColor = Color.LightBlue;
             label_apellido.Font = new Font("Sitka Banner", 14.2499981F);
             label_apellido.Location = new Point(95, 165);
             label_apellido.Name = "label_apellido";
@@ -69,7 +71,7 @@
             // label_email
             // 
             label_email.AutoSize = true;
-            label_email.BackColor = SystemColors.Control;
+            label_email.BackColor = Color.LightBlue;
             label_email.Font = new Font("Sitka Banner", 14.2499981F);
             label_email.Location = new Point(95, 208);
             label_email.Name = "label_email";
@@ -80,7 +82,7 @@
             // label_contraseña
             // 
             label_contraseña.AutoSize = true;
-            label_contraseña.BackColor = SystemColors.Control;
+            label_contraseña.BackColor = Color.LightBlue;
             label_contraseña.Font = new Font("Sitka Banner", 14.2499981F);
             label_contraseña.Location = new Point(95, 254);
             label_contraseña.Name = "label_contraseña";
@@ -91,7 +93,7 @@
             // label_confirmarcontra
             // 
             label_confirmarcontra.AutoSize = true;
-            label_confirmarcontra.BackColor = SystemColors.Control;
+            label_confirmarcontra.BackColor = Color.LightBlue;
             label_confirmarcontra.Font = new Font("Sitka Banner", 14.2499981F);
             label_confirmarcontra.Location = new Point(95, 299);
             label_confirmarcontra.Name = "label_confirmarcontra";
@@ -104,7 +106,7 @@
             // 
             label_registro.AutoSize = true;
             label_registro.Font = new Font("Sitka Small", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label_registro.Location = new Point(305, 27);
+            label_registro.Location = new Point(241, 20);
             label_registro.Name = "label_registro";
             label_registro.Size = new Size(179, 42);
             label_registro.TabIndex = 5;
@@ -113,7 +115,7 @@
             // 
             // textBox_nombre
             // 
-            textBox_nombre.Location = new Point(194, 124);
+            textBox_nombre.Location = new Point(270, 114);
             textBox_nombre.Name = "textBox_nombre";
             textBox_nombre.Size = new Size(280, 23);
             textBox_nombre.TabIndex = 6;
@@ -121,21 +123,21 @@
             // 
             // textBox_apellido
             // 
-            textBox_apellido.Location = new Point(194, 165);
+            textBox_apellido.Location = new Point(270, 158);
             textBox_apellido.Name = "textBox_apellido";
             textBox_apellido.Size = new Size(280, 23);
             textBox_apellido.TabIndex = 7;
             // 
             // textBox_email
             // 
-            textBox_email.Location = new Point(194, 213);
+            textBox_email.Location = new Point(270, 201);
             textBox_email.Name = "textBox_email";
             textBox_email.Size = new Size(280, 23);
             textBox_email.TabIndex = 8;
             // 
             // textBox_contraseña
             // 
-            textBox_contraseña.Location = new Point(205, 259);
+            textBox_contraseña.Location = new Point(270, 247);
             textBox_contraseña.Name = "textBox_contraseña";
             textBox_contraseña.Size = new Size(280, 23);
             textBox_contraseña.TabIndex = 9;
@@ -149,45 +151,59 @@
             // 
             // button_registrar
             // 
+            button_registrar.BackColor = Color.Transparent;
             button_registrar.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_registrar.Location = new Point(364, 359);
+            button_registrar.Location = new Point(256, 335);
             button_registrar.Name = "button_registrar";
             button_registrar.Size = new Size(121, 36);
             button_registrar.TabIndex = 11;
             button_registrar.Text = "REGISTRARSE";
-            button_registrar.UseVisualStyleBackColor = true;
+            button_registrar.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(381, 401);
+            linkLabel1.Location = new Point(270, 381);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(93, 23);
             linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Iniciar Sesión";
             // 
+            // panel_registro
+            // 
+            panel_registro.BackColor = Color.LightBlue;
+            panel_registro.Controls.Add(linkLabel1);
+            panel_registro.Controls.Add(textBox_contraseña);
+            panel_registro.Controls.Add(label_registro);
+            panel_registro.Controls.Add(textBox_email);
+            panel_registro.Controls.Add(button_registrar);
+            panel_registro.Controls.Add(textBox_apellido);
+            panel_registro.Controls.Add(textBox_nombre);
+            panel_registro.Location = new Point(12, 12);
+            panel_registro.Name = "panel_registro";
+            panel_registro.Size = new Size(636, 474);
+            panel_registro.TabIndex = 13;
+            // 
             // Registro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 498);
-            Controls.Add(linkLabel1);
-            Controls.Add(button_registrar);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(660, 499);
             Controls.Add(textBox_confirmarcontra);
-            Controls.Add(textBox_contraseña);
-            Controls.Add(textBox_email);
-            Controls.Add(textBox_apellido);
-            Controls.Add(textBox_nombre);
-            Controls.Add(label_registro);
             Controls.Add(label_confirmarcontra);
             Controls.Add(label_contraseña);
             Controls.Add(label_email);
             Controls.Add(label_apellido);
             Controls.Add(label_nombre);
+            Controls.Add(panel_registro);
+            ForeColor = SystemColors.ControlText;
             Name = "Registro";
             Text = "Registro";
+            panel_registro.ResumeLayout(false);
+            panel_registro.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,5 +223,6 @@
         private TextBox textBox_confirmarcontra;
         private Button button_registrar;
         private LinkLabel linkLabel1;
+        private Panel panel_registro;
     }
 }
