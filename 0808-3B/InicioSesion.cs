@@ -39,7 +39,10 @@ namespace _0808_3B
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            // Derigir a pagina de registro
+            Registro registro = new Registro();
+            registro.Show();
+            this.Hide();
         }
 
         private void labelUser_TextChanged(object sender, EventArgs e)

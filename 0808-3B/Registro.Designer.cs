@@ -2,6 +2,15 @@
 {
     partial class Registro
     {
+        // asisnar variables
+
+
+        //
+
+
+
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -34,14 +43,16 @@
             label_contraseña = new Label();
             label_confirmarcontra = new Label();
             label_registro = new Label();
-            textBox_nombre = new TextBox();
-            textBox_apellido = new TextBox();
-            textBox_email = new TextBox();
-            textBox_contraseña = new TextBox();
-            textBox_confirmarcontra = new TextBox();
-            button_registrar = new Button();
+            txtNombre = new TextBox();
+            txtApellido = new TextBox();
+            txtEmail = new TextBox();
+            txtContrasena = new TextBox();
+            txtConfirmarContra = new TextBox();
+            btnRegistrar = new Button();
             linkLabel1 = new LinkLabel();
             panel_registro = new Panel();
+            label1 = new Label();
+            txtNumDui = new TextBox();
             panel_registro.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +66,6 @@
             label_nombre.Size = new Size(81, 28);
             label_nombre.TabIndex = 0;
             label_nombre.Text = "Nombre :";
-            label_nombre.Click += label1_Click;
             // 
             // label_apellido
             // 
@@ -84,7 +94,7 @@
             label_contraseña.AutoSize = true;
             label_contraseña.BackColor = Color.LightBlue;
             label_contraseña.Font = new Font("Sitka Banner", 14.2499981F);
-            label_contraseña.Location = new Point(95, 254);
+            label_contraseña.Location = new Point(83, 276);
             label_contraseña.Name = "label_contraseña";
             label_contraseña.Size = new Size(104, 28);
             label_contraseña.TabIndex = 3;
@@ -95,12 +105,11 @@
             label_confirmarcontra.AutoSize = true;
             label_confirmarcontra.BackColor = Color.LightBlue;
             label_confirmarcontra.Font = new Font("Sitka Banner", 14.2499981F);
-            label_confirmarcontra.Location = new Point(95, 299);
+            label_confirmarcontra.Location = new Point(83, 316);
             label_confirmarcontra.Name = "label_confirmarcontra";
             label_confirmarcontra.Size = new Size(181, 28);
             label_confirmarcontra.TabIndex = 4;
             label_confirmarcontra.Text = "Confirmar contraseña :";
-            label_confirmarcontra.Click += label5_Click;
             // 
             // label_registro
             // 
@@ -111,80 +120,104 @@
             label_registro.Size = new Size(179, 42);
             label_registro.TabIndex = 5;
             label_registro.Text = "REGISTRO";
-            label_registro.Click += label6_Click;
             // 
-            // textBox_nombre
+            // txtNombre
             // 
-            textBox_nombre.Location = new Point(270, 114);
-            textBox_nombre.Name = "textBox_nombre";
-            textBox_nombre.Size = new Size(280, 23);
-            textBox_nombre.TabIndex = 6;
-            textBox_nombre.TextChanged += textBox_nombre_TextChanged;
+            txtNombre.Location = new Point(270, 114);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(280, 23);
+            txtNombre.TabIndex = 6;
             // 
-            // textBox_apellido
+            // txtApellido
             // 
-            textBox_apellido.Location = new Point(270, 158);
-            textBox_apellido.Name = "textBox_apellido";
-            textBox_apellido.Size = new Size(280, 23);
-            textBox_apellido.TabIndex = 7;
+            txtApellido.Location = new Point(270, 158);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(280, 23);
+            txtApellido.TabIndex = 7;
             // 
-            // textBox_email
+            // txtEmail
             // 
-            textBox_email.Location = new Point(270, 201);
-            textBox_email.Name = "textBox_email";
-            textBox_email.Size = new Size(280, 23);
-            textBox_email.TabIndex = 8;
+            txtEmail.Location = new Point(270, 201);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(280, 23);
+            txtEmail.TabIndex = 8;
             // 
-            // textBox_contraseña
+            // txtContrasena
             // 
-            textBox_contraseña.Location = new Point(270, 247);
-            textBox_contraseña.Name = "textBox_contraseña";
-            textBox_contraseña.Size = new Size(280, 23);
-            textBox_contraseña.TabIndex = 9;
+            txtContrasena.Location = new Point(270, 276);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(280, 23);
+            txtContrasena.TabIndex = 9;
             // 
-            // textBox_confirmarcontra
+            // txtConfirmarContra
             // 
-            textBox_confirmarcontra.Location = new Point(282, 304);
-            textBox_confirmarcontra.Name = "textBox_confirmarcontra";
-            textBox_confirmarcontra.Size = new Size(280, 23);
-            textBox_confirmarcontra.TabIndex = 10;
+            txtConfirmarContra.Location = new Point(270, 321);
+            txtConfirmarContra.Name = "txtConfirmarContra";
+            txtConfirmarContra.Size = new Size(280, 23);
+            txtConfirmarContra.TabIndex = 10;
             // 
-            // button_registrar
+            // btnRegistrar
             // 
-            button_registrar.BackColor = Color.Transparent;
-            button_registrar.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_registrar.Location = new Point(256, 335);
-            button_registrar.Name = "button_registrar";
-            button_registrar.Size = new Size(121, 36);
-            button_registrar.TabIndex = 11;
-            button_registrar.Text = "REGISTRARSE";
-            button_registrar.UseVisualStyleBackColor = false;
+            btnRegistrar.BackColor = Color.Transparent;
+            btnRegistrar.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegistrar.Location = new Point(241, 376);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(121, 36);
+            btnRegistrar.TabIndex = 11;
+            btnRegistrar.Text = "REGISTRARSE";
+            btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Sitka Banner", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(270, 381);
+            linkLabel1.Location = new Point(255, 422);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(93, 23);
             linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Iniciar Sesión";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // panel_registro
             // 
             panel_registro.BackColor = Color.LightBlue;
+            panel_registro.Controls.Add(label1);
+            panel_registro.Controls.Add(txtNumDui);
+            panel_registro.Controls.Add(label_contraseña);
+            panel_registro.Controls.Add(txtConfirmarContra);
+            panel_registro.Controls.Add(label_confirmarcontra);
             panel_registro.Controls.Add(linkLabel1);
-            panel_registro.Controls.Add(textBox_contraseña);
+            panel_registro.Controls.Add(txtContrasena);
             panel_registro.Controls.Add(label_registro);
-            panel_registro.Controls.Add(textBox_email);
-            panel_registro.Controls.Add(button_registrar);
-            panel_registro.Controls.Add(textBox_apellido);
-            panel_registro.Controls.Add(textBox_nombre);
+            panel_registro.Controls.Add(txtEmail);
+            panel_registro.Controls.Add(btnRegistrar);
+            panel_registro.Controls.Add(txtApellido);
+            panel_registro.Controls.Add(txtNombre);
             panel_registro.Location = new Point(12, 12);
             panel_registro.Name = "panel_registro";
             panel_registro.Size = new Size(636, 474);
             panel_registro.TabIndex = 13;
+            panel_registro.Paint += panel_registro_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightBlue;
+            label1.Font = new Font("Sitka Banner", 14.2499981F);
+            label1.Location = new Point(83, 234);
+            label1.Name = "label1";
+            label1.Size = new Size(131, 28);
+            label1.TabIndex = 14;
+            label1.Text = "Número de DUI:";
+            // 
+            // txtNumDui
+            // 
+            txtNumDui.Location = new Point(270, 239);
+            txtNumDui.Name = "txtNumDui";
+            txtNumDui.Size = new Size(280, 23);
+            txtNumDui.TabIndex = 13;
             // 
             // Registro
             // 
@@ -192,9 +225,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(660, 499);
-            Controls.Add(textBox_confirmarcontra);
-            Controls.Add(label_confirmarcontra);
-            Controls.Add(label_contraseña);
             Controls.Add(label_email);
             Controls.Add(label_apellido);
             Controls.Add(label_nombre);
@@ -202,6 +232,7 @@
             ForeColor = SystemColors.ControlText;
             Name = "Registro";
             Text = "Registro";
+            Load += Registro_Load;
             panel_registro.ResumeLayout(false);
             panel_registro.PerformLayout();
             ResumeLayout(false);
@@ -216,13 +247,15 @@
         private Label label_contraseña;
         private Label label_confirmarcontra;
         private Label label_registro;
-        private TextBox textBox_nombre;
-        private TextBox textBox_apellido;
-        private TextBox textBox_email;
-        private TextBox textBox_contraseña;
-        private TextBox textBox_confirmarcontra;
-        private Button button_registrar;
+        private TextBox txtNombre;
+        private TextBox txtApellido;
+        private TextBox txtEmail;
+        private TextBox txtContrasena;
+        private TextBox txtConfirmarContra;
+        private Button btnRegistrar;
         private LinkLabel linkLabel1;
         private Panel panel_registro;
+        private Label label1;
+        private TextBox txtNumDui;
     }
 }
