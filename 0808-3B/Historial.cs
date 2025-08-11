@@ -36,6 +36,8 @@ namespace _0808_3B
 
         }
 
+
+
         private void label2_Click(object sender, EventArgs e)
         {
 

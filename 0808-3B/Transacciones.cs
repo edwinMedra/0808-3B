@@ -99,8 +99,32 @@ namespace _0808_3B
 
 
                         }
+
+
+                        // Insert para historial de la transferencia (envío)
+                        string insertHistorial = @"
+    INSERT INTO historial_transacciones 
+    (numDui, fecha, monto, tipo, numCuentaDestino, detalle) 
+    VALUES 
+    (@numDui, NOW(), @monto, @tipo, @numCuentaDestino, @detalle)";
+
+                        using (MySqlCommand cmdHistorialEnvio = new MySqlCommand(insertHistorial, conn))
+                        {
+                            cmdHistorialEnvio.Parameters.AddWithValue("@numDui", dui);
+                            cmdHistorialEnvio.Parameters.AddWithValue("@monto", monto);
+                            cmdHistorialEnvio.Parameters.AddWithValue("@tipo", "envío");
+                            cmdHistorialEnvio.Parameters.AddWithValue("@numCuentaDestino", numCuenta);
+                            cmdHistorialEnvio.Parameters.AddWithValue("@detalle", $"Transferencia a {nomDestino}");
+                            cmdHistorialEnvio.ExecuteNonQuery();
+                        }
                     }
-                    //
+                    // hacer insert de actualización
+
+
+
+
+
+
 
                 }
 
