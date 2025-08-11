@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(indexDeslogeado));
             panel1 = new Panel();
-            imgBanco = new Panel();
-            textLogo = new Label();
-            label1 = new Label();
-            btnIniciar = new Button();
             btnRegistrar = new Button();
+            btnIniciar = new Button();
+            label1 = new Label();
+            textLogo = new Label();
+            imgBanco = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,14 +51,39 @@
             panel1.Size = new Size(776, 551);
             panel1.TabIndex = 0;
             // 
-            // imgBanco
+            // btnRegistrar
             // 
-            imgBanco.BackgroundImage = (Image)resources.GetObject("imgBanco.BackgroundImage");
-            imgBanco.Location = new Point(57, 85);
-            imgBanco.Name = "imgBanco";
-            imgBanco.Size = new Size(587, 360);
-            imgBanco.TabIndex = 0;
-            imgBanco.Paint += panel2_Paint;
+            btnRegistrar.BackColor = Color.Transparent;
+            btnRegistrar.Font = new Font("Sitka Banner", 11.249999F, FontStyle.Bold);
+            btnRegistrar.Location = new Point(583, 16);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(93, 36);
+            btnRegistrar.TabIndex = 4;
+            btnRegistrar.Text = "Registrarse";
+            btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
+            // 
+            // btnIniciar
+            // 
+            btnIniciar.BackColor = Color.Transparent;
+            btnIniciar.Font = new Font("Sitka Banner", 11.249999F, FontStyle.Bold);
+            btnIniciar.Location = new Point(682, 16);
+            btnIniciar.Name = "btnIniciar";
+            btnIniciar.Size = new Size(84, 36);
+            btnIniciar.TabIndex = 3;
+            btnIniciar.Text = "Iniciar Sesión ";
+            btnIniciar.UseVisualStyleBackColor = false;
+            btnIniciar.Click += btnIniciar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Banner", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(45, 496);
+            label1.Name = "label1";
+            label1.Size = new Size(614, 19);
+            label1.TabIndex = 2;
+            label1.Text = "Bienvenido a tu banca digital segura, antes de continuar porfavor Inicia Sesión o registrate si no tienes una cuenta.";
             // 
             // textLogo
             // 
@@ -71,37 +96,14 @@
             textLogo.Text = "\"Tu dinero siempre contigo.\"";
             textLogo.Click += label1_Click;
             // 
-            // label1
+            // imgBanco
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 496);
-            label1.Name = "label1";
-            label1.Size = new Size(614, 19);
-            label1.TabIndex = 2;
-            label1.Text = "Bienvenido a tu banca digital segura, antes de continuar porfavor Inicia Sesión o registrate si no tienes una cuenta.";
-            // 
-            // btnIniciar
-            // 
-            btnIniciar.BackColor = Color.Transparent;
-            btnIniciar.Font = new Font("Sitka Banner", 11.249999F, FontStyle.Bold);
-            btnIniciar.Location = new Point(682, 16);
-            btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(84, 36);
-            btnIniciar.TabIndex = 3;
-            btnIniciar.Text = "Iniciar Sesión ";
-            btnIniciar.UseVisualStyleBackColor = false;
-            // 
-            // btnRegistrar
-            // 
-            btnRegistrar.BackColor = Color.Transparent;
-            btnRegistrar.Font = new Font("Sitka Banner", 11.249999F, FontStyle.Bold);
-            btnRegistrar.Location = new Point(583, 16);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(93, 36);
-            btnRegistrar.TabIndex = 4;
-            btnRegistrar.Text = "Registrarse";
-            btnRegistrar.UseVisualStyleBackColor = false;
+            imgBanco.BackgroundImage = (Image)resources.GetObject("imgBanco.BackgroundImage");
+            imgBanco.Location = new Point(57, 85);
+            imgBanco.Name = "imgBanco";
+            imgBanco.Size = new Size(587, 360);
+            imgBanco.TabIndex = 0;
+            imgBanco.Paint += panel2_Paint;
             // 
             // indexDeslogeado
             // 

@@ -31,8 +31,8 @@
             panel1 = new Panel();
             linkLabel1 = new LinkLabel();
             buttonIniciar = new Button();
-            labelContra = new TextBox();
-            labelUser = new TextBox();
+            txtContra = new TextBox();
+            txtDui = new TextBox();
             label2 = new Label();
             Contraseña = new Label();
             usuario = new Label();
@@ -44,8 +44,8 @@
             panel1.BackColor = Color.LightBlue;
             panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(buttonIniciar);
-            panel1.Controls.Add(labelContra);
-            panel1.Controls.Add(labelUser);
+            panel1.Controls.Add(txtContra);
+            panel1.Controls.Add(txtDui);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(Contraseña);
             panel1.Controls.Add(usuario);
@@ -79,20 +79,20 @@
             buttonIniciar.UseVisualStyleBackColor = false;
             buttonIniciar.Click += button1_Click;
             // 
-            // labelContra
+            // txtContra
             // 
-            labelContra.Location = new Point(180, 300);
-            labelContra.Name = "labelContra";
-            labelContra.Size = new Size(279, 23);
-            labelContra.TabIndex = 4;
+            txtContra.Location = new Point(180, 286);
+            txtContra.Name = "txtContra";
+            txtContra.Size = new Size(279, 23);
+            txtContra.TabIndex = 4;
             // 
-            // labelUser
+            // txtDui
             // 
-            labelUser.Location = new Point(147, 212);
-            labelUser.Name = "labelUser";
-            labelUser.Size = new Size(312, 23);
-            labelUser.TabIndex = 3;
-            labelUser.TextChanged += labelUser_TextChanged;
+            txtDui.Location = new Point(180, 212);
+            txtDui.Name = "txtDui";
+            txtDui.Size = new Size(279, 23);
+            txtDui.TabIndex = 3;
+            txtDui.TextChanged += labelUser_TextChanged;
             // 
             // label2
             // 
@@ -109,7 +109,7 @@
             // 
             Contraseña.AutoSize = true;
             Contraseña.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Contraseña.Location = new Point(62, 293);
+            Contraseña.Location = new Point(32, 277);
             Contraseña.Name = "Contraseña";
             Contraseña.Size = new Size(112, 30);
             Contraseña.TabIndex = 1;
@@ -119,11 +119,11 @@
             // 
             usuario.AutoSize = true;
             usuario.Font = new Font("Sitka Banner", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usuario.Location = new Point(62, 205);
+            usuario.Location = new Point(32, 205);
             usuario.Name = "usuario";
-            usuario.Size = new Size(82, 30);
+            usuario.Size = new Size(142, 30);
             usuario.TabIndex = 0;
-            usuario.Text = "Usuario:";
+            usuario.Text = "Número de Dui:";
             usuario.Click += label1_Click;
             // 
             // InicioSesion
@@ -146,8 +146,8 @@
         private Label usuario;
         private Label Contraseña;
         private Label label2;
-        private TextBox labelContra;
-        private TextBox labelUser;
+        private TextBox txtContra;
+        private TextBox txtDui;
         private Button buttonIniciar;
         private LinkLabel linkLabel1;
     }

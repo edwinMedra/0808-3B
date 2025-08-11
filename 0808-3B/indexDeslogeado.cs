@@ -26,5 +26,21 @@ namespace _0808_3B
         {
 
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            // mostrar pagina de registro 
+            Registro registro = new Registro();
+            registro.Show();
+            this.Hide();
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            // mostrar pagina para iniciar sesión
+            InicioSesion inicioSesion = new InicioSesion();
+            inicioSesion.Show();
+            this.Hide();
+        }
     }
 }
