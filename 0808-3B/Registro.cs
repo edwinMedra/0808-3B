@@ -56,8 +56,12 @@ namespace _0808_3B
                     {
                         conn.Open();
 
+                        // funcion para asignar el num de cuenta 
+                        Random rnd = new Random();
+                        int numeroCuenta = rnd.Next(10000000, 100000000); // entre 10,000,000 y 99,999,999
+                      
                         //insert
-                        string insertQuery = "INSERT INTO usuarios (nombre,apellido,email,numDui,pass) VALUES (@nombre,@apellido, @email,@numDui,@pass)";
+                        string insertQuery = "INSERT INTO usuarios (nombre,apellido,email,numDui,pass, saldo, numCuenta) VALUES (@nombre,@apellido, @email,@numDui,@pass, '10.00', @numeroCuenta)";
                         using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("@nombre", nombre);
@@ -65,6 +69,7 @@ namespace _0808_3B
                             cmd.Parameters.AddWithValue("@email", email);
                             cmd.Parameters.AddWithValue("@numDui", numDui);
                             cmd.Parameters.AddWithValue("@pass", contrasena);
+                            cmd.Parameters.AddWithValue("@numeroCuenta", numeroCuenta);
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("Usuario registrado exitosamente", "Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);

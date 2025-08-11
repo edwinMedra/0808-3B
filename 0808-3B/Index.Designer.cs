@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             panel_index = new Panel();
+            lblSaldo = new Label();
+            label1 = new Label();
+            button1 = new Button();
+            lblUsuario = new Label();
+            lblBienvenida = new Label();
             label_descripción = new Label();
             label_frase = new Label();
             pictureBox_index = new PictureBox();
@@ -48,6 +53,11 @@
             // panel_index
             // 
             panel_index.BackColor = Color.LightBlue;
+            panel_index.Controls.Add(lblSaldo);
+            panel_index.Controls.Add(label1);
+            panel_index.Controls.Add(button1);
+            panel_index.Controls.Add(lblUsuario);
+            panel_index.Controls.Add(lblBienvenida);
             panel_index.Controls.Add(label_descripción);
             panel_index.Controls.Add(label_frase);
             panel_index.Controls.Add(pictureBox_index);
@@ -62,11 +72,71 @@
             panel_index.Size = new Size(776, 636);
             panel_index.TabIndex = 0;
             // 
+            // lblSaldo
+            // 
+            lblSaldo.AutoSize = true;
+            lblSaldo.Font = new Font("Sitka Small Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblSaldo.ForeColor = SystemColors.ControlText;
+            lblSaldo.Location = new Point(486, 106);
+            lblSaldo.Name = "lblSaldo";
+            lblSaldo.Size = new Size(59, 23);
+            lblSaldo.TabIndex = 13;
+            lblSaldo.Text = "00.00";
+            lblSaldo.Click += lblSaldo_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Small Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(341, 106);
+            label1.Name = "label1";
+            label1.Size = new Size(157, 23);
+            label1.TabIndex = 12;
+            label1.Text = "Saldo disponible: ";
+            label1.Click += label1_Click_3;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.LightBlue;
+            button1.Font = new Font("Sitka Banner", 12F);
+            button1.ForeColor = SystemColors.ControlText;
+            button1.Location = new Point(24, 126);
+            button1.Name = "button1";
+            button1.Size = new Size(139, 28);
+            button1.TabIndex = 11;
+            button1.Text = "Créditos";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Sitka Small Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = SystemColors.ControlText;
+            lblUsuario.Location = new Point(462, 80);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(135, 23);
+            lblUsuario.TabIndex = 10;
+            lblUsuario.Text = "!BIENVENIDO ¡";
+            // 
+            // lblBienvenida
+            // 
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("Sitka Small Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblBienvenida.ForeColor = SystemColors.ControlText;
+            lblBienvenida.Location = new Point(341, 80);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(124, 23);
+            lblBienvenida.TabIndex = 9;
+            lblBienvenida.Text = "!BIENVENIDO";
+            lblBienvenida.Click += label1_Click_1;
+            // 
             // label_descripción
             // 
             label_descripción.Font = new Font("Sitka Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label_descripción.ForeColor = SystemColors.ControlText;
-            label_descripción.Location = new Point(214, 399);
+            label_descripción.Location = new Point(215, 453);
             label_descripción.Name = "label_descripción";
             label_descripción.Size = new Size(501, 115);
             label_descripción.TabIndex = 8;
@@ -78,7 +148,7 @@
             label_frase.AutoSize = true;
             label_frase.Font = new Font("Sitka Small Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label_frase.ForeColor = SystemColors.ControlText;
-            label_frase.Location = new Point(356, 375);
+            label_frase.Location = new Point(357, 429);
             label_frase.Name = "label_frase";
             label_frase.Size = new Size(252, 46);
             label_frase.TabIndex = 7;
@@ -90,7 +160,7 @@
             pictureBox_index.BackColor = Color.Transparent;
             pictureBox_index.Image = (Image)resources.GetObject("pictureBox_index.Image");
             pictureBox_index.InitialImage = null;
-            pictureBox_index.Location = new Point(214, 81);
+            pictureBox_index.Location = new Point(215, 135);
             pictureBox_index.Margin = new Padding(9);
             pictureBox_index.Name = "pictureBox_index";
             pictureBox_index.Size = new Size(501, 285);
@@ -107,8 +177,9 @@
             button_creditos.Name = "button_creditos";
             button_creditos.Size = new Size(139, 28);
             button_creditos.TabIndex = 5;
-            button_creditos.Text = "Créditos";
+            button_creditos.Text = "Transferir";
             button_creditos.UseVisualStyleBackColor = false;
+            button_creditos.Click += button_creditos_Click;
             // 
             // button_consultarSaldo
             // 
@@ -121,6 +192,7 @@
             button_consultarSaldo.TabIndex = 4;
             button_consultarSaldo.Text = "Consultar Saldo";
             button_consultarSaldo.UseVisualStyleBackColor = false;
+            button_consultarSaldo.Click += button_consultarSaldo_Click;
             // 
             // button_transferencias
             // 
@@ -131,7 +203,7 @@
             button_transferencias.Name = "button_transferencias";
             button_transferencias.Size = new Size(139, 33);
             button_transferencias.TabIndex = 3;
-            button_transferencias.Text = "Transferencias";
+            button_transferencias.Text = "Historial";
             button_transferencias.UseVisualStyleBackColor = false;
             button_transferencias.Click += button2_Click;
             // 
@@ -159,6 +231,7 @@
             button_cerrarsesion.TabIndex = 1;
             button_cerrarsesion.Text = "Cerrar Sesión";
             button_cerrarsesion.UseVisualStyleBackColor = false;
+            button_cerrarsesion.Click += button_cerrarsesion_Click;
             // 
             // pictureBox_user
             // 
@@ -202,5 +275,10 @@
         private PictureBox pictureBox_index;
         private Label label_frase;
         private Label label_descripción;
+        private Label lblBienvenida;
+        private Label lblUsuario;
+        private Button button1;
+        private Label label1;
+        private Label lblSaldo;
     }
 }

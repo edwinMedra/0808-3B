@@ -12,10 +12,19 @@ namespace _0808_3B
 {
     public partial class Historial : Form
     {
-        public Historial()
+        public string nombreUsuario;
+        public double saldo;
+        public string dui;
+
+        public Historial(string nombreUsuario,double saldo, string dui)
         {
             InitializeComponent();
+            this.nombreUsuario = nombreUsuario;
+            this.saldo = saldo;
+            this.dui = dui;
         }
+
+    
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -55,6 +64,16 @@ namespace _0808_3B
         private void label21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            // boton para regresar a pagina principal
+            this.Hide();
+            Index index = new Index(nombreUsuario, saldo, dui);
+            index.ShowDialog();
+            Application.Exit();
+          
         }
     }
 }

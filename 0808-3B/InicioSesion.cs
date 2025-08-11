@@ -36,10 +36,10 @@ namespace _0808_3B
         private void button1_Click(object sender, EventArgs e)
         {
             // acción de tomar los datos
-            string email = txtDui.Text.Trim();
+            string dui = txtDui.Text.Trim();
             string pass = txtContra.Text.Trim();
 
-            if (email == "" || pass == "")
+            if (dui == "" || pass == "")
             {
                 MessageBox.Show("Completa ambos campos.");
                 return;
@@ -49,10 +49,10 @@ namespace _0808_3B
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT nombre, pass FROM usuarios WHERE email=@e AND pass=@p LIMIT 1";
+                string query = "SELECT nombre, saldo, numDui FROM usuarios WHERE numDui=@dui AND pass=@p LIMIT 1";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@e", email);
+                    cmd.Parameters.AddWithValue("@dui", dui);
                     cmd.Parameters.AddWithValue("@p", pass);
 
                     using (var reader = cmd.ExecuteReader())
@@ -60,7 +60,7 @@ namespace _0808_3B
                         if (reader.Read())
                         {
                             this.Hide();
-                            var index = new Index();
+                            var index = new Index(reader.GetString(0), reader.GetDouble(1), reader.GetString(2));
                             index.ShowDialog();
                             Application.Exit();
                         }
