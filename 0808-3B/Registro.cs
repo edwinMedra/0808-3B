@@ -98,9 +98,10 @@ namespace _0808_3B
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            InicioSesion inicioSesion = new InicioSesion();
-            inicioSesion.Show();
             this.Hide();
+            InicioSesion inicioSesion = new InicioSesion();
+            inicioSesion.ShowDialog();
+            Application.Exit();
             
         }
     }
